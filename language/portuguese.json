@@ -1,0 +1,119 @@
+{
+	"language": "Português",
+	
+	"common":	
+		{
+			"login": {
+				"user_login":		"Login Usuário",
+				"user_name":		"Nome de Usuário",
+				"stars_id":			"ID Stars",
+				"submit":			"Login",
+				"admin_login":		"Login Admin",
+				"password":			"Senha"
+			},
+
+			"error": {
+				"incorrect_login_user": 		"Desculpe, você deve informar o Nome de Usuário e ID Stars corretos.",
+				"incorrect_login_admin":		"Desculpe, você deve informar o Nome de Usuário e Senha corretos.",
+				"location_not_found":			"Desculpe, sua localidade não foi encontrada.",
+				"url_not_found":				"Desculpe, a url para sua localidade não foi encontrada."
+				},
+
+			"game_title":		"Workshop Simulator",
+			"admin_title":		"Admin",
+			"yes":				"Sim",
+			"no":				"Não",	
+
+			"users":			"Usuários",
+			"dealers":			"Distribuidores",
+			"locations":		"Localidades",
+			"admins":			"Admins",
+			"ranking":			"Ranking"
+		},
+	"users":
+		{
+		"name":					"Usuários",
+		"title": 				"Editar Usuários",
+		"info":{
+			"user_name": 		"Nome do Usuário",
+			"user_stars": 		"ID Stars",
+			"user_dealercode": 	"Código do Distribuidor",
+			"user_score": 		"Pontuação"
+		},
+		
+		"button":{
+			"add":				"Adicionar Novo",
+			"edit":				"Editar Usuário",
+			"save":				"Salvar",
+			"close":			"Fechar",
+			"delete":			"Excluir"
+		},
+
+		"confirm":{
+			"delete_title":		"Confirmação de Exclusão de Usuário"
+		}
+	},
+
+	"dealers":	
+		{
+		"name":					"Distribuidores",
+		"title": 				"Editar Distribuidores",
+		"info":{
+			"dealer_code": 		"Código do Distribuidor",
+			"dealer_locname": 	"Localidade"
+		},
+		
+		"button":{
+			"add":				"Adicionar Novo",
+			"edit":				"Editar Distribuidor",
+			"save":				"Salvar",
+			"close":			"Fechar",
+			"delete":			"Excluir"
+		},
+		"confirm":{
+			"delete_title":		"Confirmação de Exclusão de Distribuidor"
+		}
+	},
+
+	"locations":	
+		{
+		"name":					"Localidades",
+		"title": 				"Editar Localidades",
+		"info":{
+			"location_name": 	"Nome da Localidade",
+			"location_url": 	"URL da Localidade"
+		},
+		
+		"button":{
+			"add":				"Adicionar Novo",
+			"edit":				"Editar Localidade",
+			"save":				"Salvar",
+			"close":			"Fechar",
+			"delete":			"Excluir"
+		},
+		"confirm":{
+			"delete_title":		"Confirmação de Exclusão de Localidade"
+		}
+	},
+
+	"admins":	
+		{
+		"name":					"Admins",
+		"title": 				"Editar Admins",
+		"info":{
+			"admin_name": 		"Nome do Admin",
+			"admin_password":	"Senha"
+		},
+		
+		"button":{
+			"add":				"Adicionar Novo",
+			"edit":				"Editar Admin",
+			"save":				"Salvar",
+			"close":			"Fechar",
+			"delete":			"Excluir"
+		},
+		"confirm":{
+			"delete_title":		"Confirmação de Exclusão de Admin"
+		}
+	}
+}

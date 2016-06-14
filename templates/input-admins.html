@@ -1,0 +1,36 @@
+<div class=" column admin_name">
+    <input 
+        type="hidden" 
+        name="type" 
+        value="'admin'"
+        ng-init="item.inputData.type = 'admin'"
+        ng-model="item.inputData.type" />
+    <input 
+        type="hidden" 
+        name="admin_id" 
+        value="{{ item.admin_id }}"
+        ng-init="item.inputData.admin_id = item.admin_id" 
+        ng-model="item.inputData.admin_id" />
+    <input 
+        type="text" 
+        class="form-control" 
+        id="admin_name"
+        name="admin_name" 
+        placeholder="Admin Name" 
+        value="{{ item.admin_name }}"
+        ng-init="item.inputData.admin_name = item.admin_name" 
+        ng-model="item.inputData.admin_name"
+        required />
+</div>
+<div class="column admin_password">
+    <input 
+        type="text" 
+        class="form-control" 
+        id="admin_password"
+        name="admin_password" 
+        placeholder="Password" 
+        value="{{ item.admin_password }}"
+        ng-init="item.inputData.admin_password = item.admin_password" 
+        ng-model="item.inputData.admin_password"
+        required />
+</div>

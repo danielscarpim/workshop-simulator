@@ -1,0 +1,19 @@
+<div class="ranking">
+    <h2>{{ interFace.common.ranking }}</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{{ interFace.users.info.user_name }}</th>
+                <th>{{ interFace.users.info.user_dealercode }}</th>
+                <th>{{ interFace.users.info.user_score }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in users | limitTo:'10' | orderBy:'-user_score'">
+                <td>{{ user.user_name }}</td>
+                <td>{{ user.user_dealercode }}</td>
+                <td>{{ user.user_score }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

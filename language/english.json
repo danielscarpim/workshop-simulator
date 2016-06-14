@@ -1,0 +1,119 @@
+{
+	"language": "English",
+	
+	"common":	
+		{
+			"login": {
+				"user_login":		"User Login",
+				"user_name":		"User Name",
+				"stars_id":			"Stars ID",
+				"submit":			"Login",
+				"admin_login":		"Admin Login",
+				"password":			"Password"
+			},
+
+			"error": {
+				"incorrect_login_user": 		"Sorry, you must enter the correct Username and Stars ID to log in.",
+				"incorrect_login_admin":		"Sorry, you must enter the correct Username and Password to log in.",
+				"location_not_found":			"Sorry, your location was not found.",
+				"url_not_found":				"Sorry, a URL for your location was not found."
+				},
+
+			"game_title":		"Workshop Simulator",
+			"admin_title":		"Admin",
+			"yes":				"Yes",
+			"no":				"No",	
+
+			"users":			"Users",
+			"dealers":			"Dealers",
+			"locations":		"Locations",
+			"admins":			"Admins",
+			"ranking":			"Ranking"
+		},
+	"users":
+		{
+		"name":					"Users",
+		"title": 				"Edit Users",
+		"info":{
+			"user_name": 		"User Name",
+			"user_stars": 		"Stars ID",
+			"user_dealercode": 	"Dealer Code",
+			"user_score": 		"Score"
+		},
+		
+		"button":{
+			"add":				"Add New",
+			"edit":				"Edit User",
+			"save":				"Save",
+			"close":			"Close",
+			"delete":			"Delete"
+		},
+
+		"confirm":{
+			"delete_title":		"Confirm User Delete"
+		}
+	},
+
+	"dealers":	
+		{
+		"name":					"Dealers",
+		"title": 				"Edit Dealers",
+		"info":{
+			"dealer_code": 		"Dealer Code",
+			"dealer_locname": 	"Location"
+		},
+		
+		"button":{
+			"add":				"Add New",
+			"edit":				"Edit Dealer",
+			"save":				"Save",
+			"close":			"Close",
+			"delete":			"Delete"
+		},
+		"confirm":{
+			"delete_title":		"Confirm Dealer Delete"
+		}
+	},
+
+	"locations":	
+		{
+		"name":					"Locations",
+		"title": 				"Edit Locations",
+		"info":{
+			"location_name": 	"Location Name",
+			"location_url": 	"Location URL"
+		},
+		
+		"button":{
+			"add":				"Add New",
+			"edit":				"Edit Location",
+			"save":				"Save",
+			"close":			"Close",
+			"delete":			"Delete"
+		},
+		"confirm":{
+			"delete_title":		"Confirm Location Delete"
+		}
+	},
+
+	"admins":	
+		{
+		"name":					"Admins",
+		"title": 				"Edit Admins",
+		"info":{
+			"admin_name": 		"Admin Name",
+			"admin_password":	"Password"
+		},
+		
+		"button":{
+			"add":				"Add New",
+			"edit":				"Edit Admin",
+			"save":				"Save",
+			"close":			"Close",
+			"delete":			"Delete"
+		},
+		"confirm":{
+			"delete_title":		"Confirm Admin Delete"
+		}
+	}
+}

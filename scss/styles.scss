@@ -1,0 +1,280 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+@import "compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+@include font-face(
+	"Titillium", 
+	font-files(
+		"../fonts/Titillium/titilliumweb-regular-webfont.svg",
+		"../fonts/Titillium/titilliumweb-regular-webfont.ttf",
+		"../fonts/Titillium/titilliumweb-regular-webfont.woff",
+		"../fonts/Titillium/titilliumweb-regular-webfont.otf"
+		),
+		"../fonts/Titillium/titilliumweb-regular-webfont.eot",
+		normal,
+		normal
+	);
+
+@include font-face(
+	"Titillium", 
+	font-files(
+		"../fonts/Titillium/titilliumweb-bold-webfont.svg",
+		"../fonts/Titillium/titilliumweb-bold-webfont.ttf",
+		"../fonts/Titillium/titilliumweb-bold-webfont.woff",
+		"../fonts/Titillium/titilliumweb-bold-webfont.otf"
+		),
+		"../fonts/Titillium/titilliumweb-bold-webfont.eot",
+		bold,
+		normal
+	);
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #0c0c0c;
+	font-family: "Titillium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+body + object, body + object + object { display: none; }
+
+.header, .footer {
+	background-image: url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	padding: 40px 0;	
+
+	.logo {
+		float: left;
+	}
+	.ford {
+		float: right;
+	}
+}
+
+.header {
+	background-position: center top;
+	border-bottom: 5px solid $brand-primary;
+	min-height: 20%;
+}
+
+.footer {
+	background-position: center bottom;
+	border-top: 5px solid $brand-primary;
+	height: 20%;
+}
+
+.main-content {
+	padding: 40px;
+	background: $body-bg;
+	min-height: 60%;
+}
+
+.btn {
+	@include border-radius(0);
+	border: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+	.glyphicon {
+		margin-right: 7px;
+	}
+}
+
+button {
+	&:focus, &:active {
+		outline: none !important;
+		@include box-shadow(none);
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	//color: $brand-primary;
+	font-weight: bold;
+}
+
+.page-title {
+	margin: 0 0 40px;
+}
+
+.login-box {
+	border: 5px solid $brand-primary;
+	.panel {
+		margin-bottom: 0;
+		padding: 40px;
+		border: none;
+	}
+
+	.panel-body {
+		padding: 0;
+	}
+
+	h2 {
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+
+	label {
+		display: none;
+	}
+}
+
+.ranking {
+	h2 {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+}
+
+.btn-default {
+	//border: 1px solid $gray-lighter;
+	color: $link-color;
+	background: $gray-lighter;
+}
+
+.btn-container {
+	padding-right: 15px;
+}
+
+.nav-tabs {
+	li {
+		a {
+			cursor: pointer;
+			font-weight: bold;
+			text-transform: uppercase;
+			&:before {
+				@extend .glyphicon;
+				margin-right: 7px;
+				font-weight: normal;
+			}
+
+			&.users:before {
+				@extend .glyphicon-user;
+			}
+
+			&.dealers:before {
+				@extend .glyphicon-briefcase;
+			}
+
+			&.locations:before {
+				@extend .glyphicon-globe;
+			}
+
+			&.admins:before {
+				@extend .glyphicon-cog;
+			}
+		}
+	}
+}
+
+.logoff {
+	&:before {
+		@extend .glyphicon;
+		@extend .glyphicon-off;
+		margin-right: 7px;
+	}
+}
+
+.list-container {
+	margin-top: 20px;
+	
+	ul.list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.list-content li:hover {
+		background: $gray-lighter;
+		.btn-edit {
+			@extend .btn-primary;
+		}
+
+		.btn-add {
+			@extend .btn-success;
+		}
+	}
+
+	li {
+		padding: 5px 0;
+		width: 100%;
+		overflow: hidden;
+		border-bottom: 1px solid $gray-lighter;
+	}
+
+	.list-title {
+		border-bottom: 1px solid $gray-lighter;
+
+		strong {
+			display: block;
+			line-height: inherit;
+		}
+	}
+
+	.form-control, select.form-control {
+		@include border-radius(0);
+		color: $gray-base;
+	}
+
+	.value {
+		line-height: 34px;
+		padding: 0 12px;
+	}
+
+	.btn {
+		padding: 0;
+		line-height: 34px;
+	}
+
+	.column {
+		@include make-sm-column(4);
+	}
+
+	.user_name, .user_stars, .user_dealercode, .user_score {
+		@include make-sm-column(2);
+	}
+
+	.controls {
+		@include make-sm-column(4);
+		vertical-align: middle;
+		padding-right: 0;
+
+		.btn {
+			text-align: center;
+		}
+
+		.btn-edit, .btn-add {
+			width: 100%;
+		}
+
+		.btn-add:hover {
+			@extend .btn-success;
+		}
+
+	}
+
+	.update {
+		.btn {
+			width: 33.333%;
+		}
+	}
+
+	.add {
+		.btn {
+			width: 50%;
+		}
+	}
+}

@@ -1,0 +1,69 @@
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" ng-model="confirmModal">
+  <div class="modal-dialog" role="document">
+    
+      <div class="modal-content">
+        
+        <!-- Users -->
+        <div class="users" ng-if="type === 'users'">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">{{interFace.users.confirm.delete_title}}</h4>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to delete User <strong>{{currentItem.user_name}}</strong>?</p>
+          </div>
+          <div class="modal-footer">
+            <button class='btn btn-danger' ng-click="ok()">{{interFace.common.yes}}</button>
+    	  	  <button class='btn btn-primary' ng-click="cancel()">{{interFace.common.no}}</button>
+          </div>
+        </div>
+
+        <!-- Dealers -->
+        <div class="users" ng-if="type === 'dealers'">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">{{interFace.dealers.confirm.delete_title}}</h4>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to delete Dealer <strong>{{currentItem.dealer_code}}</strong>?</p>
+          </div>
+          <div class="modal-footer">
+            <button class='btn btn-danger' ng-click="ok()">{{interFace.common.yes}}</button>
+            <button class='btn btn-primary' ng-click="cancel()">{{interFace.common.no}}</button>
+          </div>
+        </div>
+
+        <!-- Locations -->
+        <div class="users" ng-if="type === 'locations'">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">{{interFace.locations.confirm.delete_title}}</h4>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to delete Location <strong>{{currentItem.location_name}}</strong>?</p>
+          </div>
+          <div class="modal-footer">
+            <button class='btn btn-danger' ng-click="ok()">{{interFace.common.yes}}</button>
+            <button class='btn btn-primary' ng-click="cancel()">{{interFace.common.no}}</button>
+          </div>
+        </div>
+
+        <!-- Locations -->
+        <div class="admins" ng-if="type === 'admins'">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">{{interFace.admins.confirm.delete_title}}</h4>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to delete Admin <strong>{{currentItem.admin_name}}</strong>?</p>
+          </div>
+          <div class="modal-footer">
+            <button class='btn btn-danger' ng-click="ok()">{{interFace.common.yes}}</button>
+            <button class='btn btn-primary' ng-click="cancel()">{{interFace.common.no}}</button>
+          </div>
+        </div>
+
+    </div>
+
+  </div>
+</div>

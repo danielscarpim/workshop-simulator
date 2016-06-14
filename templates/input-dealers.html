@@ -1,0 +1,36 @@
+<div class=" column dealer_code">
+    <input 
+        type="hidden" 
+        name="type" 
+        value="'dealer'"
+        ng-init="item.inputData.type = 'dealer'"
+        ng-model="item.inputData.type" />
+    <input 
+        type="hidden" 
+        name="dealer_id" 
+        value="{{ item.dealer_id }}"
+        ng-init="item.inputData.dealer_id = item.dealer_id" 
+        ng-model="item.inputData.dealer_id" />
+    <input 
+        type="text" 
+        class="form-control" 
+        id="dealer_code" 
+        name="dealer_code"
+        placeholder="Dealer Code" 
+        value="{{ item.dealer_code }}"
+        ng-init="item.inputData.dealer_code = item.dealer_code" 
+        ng-model="item.inputData.dealer_code"
+        required
+         />
+</div>
+<div class="column dealer_location">
+    <select 
+        class="form-control" 
+        name="location"
+        ng-init="item.inputData.location_id = item.dealer_location"
+        ng-model="item.inputData.location_id"
+        ng-options="location.location_id as location.location_name for location in locations"  
+        required>
+        <option value="" selected disabled>Location</option>
+    </select>
+</div>

@@ -1,0 +1,52 @@
+<div class="column user_name">
+    <input 
+        type="hidden" 
+        name="type" 
+        value="'user'"
+        ng-init="item.inputData.type = 'user'"
+        ng-model="item.inputData.type" />
+    <input 
+        type="hidden" 
+        name="user_id" 
+        value="{{ item.user_id }}"
+        ng-init="item.inputData.user_id = item.user_id" 
+        ng-model="item.inputData.user_id" />
+    <input 
+        type="text" 
+        class="form-control" 
+        id="user_name" 
+        name="Name"
+        placeholder="Name" 
+        value="{{ item.user_name }}"
+        ng-init="item.inputData.user_name = item.user_name" 
+        ng-model="item.inputData.user_name"
+        required />
+</div>
+<div class="column user_stars">
+    <input 
+        type="text" 
+        name="user_stars"
+        class="form-control" 
+        id="user_stars" 
+        placeholder="Stars ID" 
+        value="{{ item.user_stars }}" 
+        ng-init="item.inputData.user_stars = item.user_stars" 
+        ng-model="item.inputData.user_stars"
+        required />
+</div>
+<div class="column user_dealercode">
+    <select 
+        class="form-control" 
+        name="dealer_code"
+        ng-init="item.inputData.dealer_id = item.user_dealer"
+        ng-model="item.inputData.dealer_id"
+        ng-options="dealer.dealer_id as dealer.dealer_code for dealer in dealers"  
+        required >
+        <option value="" selected disabled>Dealer Code</option>
+    </select>
+</div>
+<div class="column user_score">
+    <span class="value">
+        {{item.user_score}}
+    </span>
+</div>

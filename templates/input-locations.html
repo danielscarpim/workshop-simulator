@@ -1,0 +1,36 @@
+<div class=" column location_name">
+    <input 
+        type="hidden" 
+        name="type" 
+        value="'location'"
+        ng-init="item.inputData.type = 'location'"
+        ng-model="item.inputData.type" />
+    <input 
+        type="hidden" 
+        name="location_id" 
+        value="{{ item.location_id }}"
+        ng-init="item.inputData.location_id = item.location_id" 
+        ng-model="item.inputData.location_id" />
+    <input 
+        type="text" 
+        class="form-control" 
+        id="location_name"
+        name="location_name" 
+        placeholder="Location Name" 
+        value="{{ item.location_name }}"
+        ng-init="item.inputData.location_name = item.location_name" 
+        ng-model="item.inputData.location_name"
+        required />
+</div>
+<div class="column location_url">
+    <input 
+        type="text" 
+        class="form-control" 
+        id="location_url"
+        name="location_url" 
+        placeholder="Location Url" 
+        value="{{ item.location_url }}"
+        ng-init="item.inputData.location_url = item.location_url" 
+        ng-model="item.inputData.location_url"
+        required />
+</div>

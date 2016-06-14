@@ -1,0 +1,64 @@
+<alert></alert>
+<div class="list-container {{this.type}}">
+    <div class="row">
+        <div class="col-md-8">
+            <h3>{{interFace[type].title}}</h3>
+        </div>
+
+            <h3 class="controls">
+                <div class="btn-container">
+                    <button class="btn btn-default btn-xs btn-add" ng-click="addRow(this[type])" ng-disabled="isEditing == true">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{interFace[type].button.add}}</button>
+                </div>
+            </h3>
+    </div>
+
+    <div>
+        <ul class="list list-title">
+            <li>
+                <div class="column {{key}}" ng-repeat="(key, value) in interFace[type].info" ng-class="{{key}}">
+                    <strong class="value">{{value}}</strong>
+                </div>
+            </li>
+        </ul>
+        <ul class="list list-content">
+            <li ng-repeat="item in this[type]">
+                <div class="static-row" ng-hide="item.editable || item.isNew">
+                    <div class="column {{key}}" ng-repeat="(key, value) in interFace[type].info">
+                        <span class="value">
+                            {{item[key]}}
+                        </span>
+                    </div>
+                    <div class="controls default">
+                        <button class="btn btn-default btn-xs btn-edit" ng-click="editRow(item)">
+                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>{{interFace[type].button.edit}}</button>
+                    </div>
+                </div>
+                <div class="edit-row" ng-show="item.editable" ng-hide="item">
+                    <form> 
+                        <ng-include src="'templates/input-'+this.type+'.html'"></ng-include>
+                        <div class="controls update btn-group">
+                            <button type="submit" ng-click="updateData('update',item)" class="btn btn-success btn-xs">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{interFace[type].button.save}}</button>
+                            <button class="btn btn-default btn-xs" ng-click="closeRow(item)">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>{{interFace[type].button.close}}</button>
+                            <button class="btn btn-danger btn-xs" ng-click="updateData('delete',item)">
+                                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>{{interFace[type].button.delete}}</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="new-row" ng-show="item.isNew">
+                    <form> 
+                        <ng-include src="'templates/input-'+this.type+'.html'"></ng-include>
+                        <div class="controls add btn-group">
+                            <button type="submit" class="btn btn-success btn-xs" ng-click="updateData('add',item)">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{interFace[type].button.add}}</button>
+                            <button class="btn btn-default btn-xs" ng-click="closeRow(item)">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>{{interFace[type].button.close}}</button>
+                        </div>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
